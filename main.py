@@ -31,7 +31,7 @@ def conecta_MySQL():
             host='192.168.20.5',
             port=3306,
             user='Uprag',
-            password='rio.2024*',
+            password='rio.2024',
             db='pallet_24'
         )
     except Error as ex:
@@ -43,7 +43,7 @@ def conecta_MySQL():
 
 def cargar():
     mensaje = ''
-    fecha = '20240927' # datetime.datetime.now().strftime("%Y%m%d")
+    fecha = datetime.datetime.now().strftime("%Y%m%d")
 
     mensaje += insertar('Inicio de Proceso de Carga...')
     mensaje += insertar('Recuperacion de Despachos a cargar...')

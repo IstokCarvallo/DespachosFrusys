@@ -80,7 +80,7 @@ def cargar():
                 "contenedor,folio,especie,variedad,variedadReal,embalaje,etiqueta,productor,predio,"
                 "cuartel,productorReal,predioReal,cuartelReal,packing,fechaEmbalaje,categoria,"
                 "categoriaReal,calibre,calibreReal,condicion,basePallet,cajas)"
-                f"Values ({despacho[0]}, '{despacho[1]}', {despacho[2]}, {despacho[3]}, '{despacho[4]}', "
+                f"Values ('{despacho[0]}', '{despacho[1]}', {despacho[2]}, {despacho[3]}, '{despacho[4]}', "
                 f"{despacho[5]}, '{despacho[6]}', '{despacho[7]}', {despacho[8]}, {despacho[9]}, {despacho[10]}, "
                 f"'{despacho[11]}', {despacho[12]}, {despacho[13]}, {despacho[14]}, {despacho[15]}, {despacho[16]}, "
                 f"{despacho[17]}, {despacho[18]}, {despacho[19]}, '{despacho[20]}', {despacho[21]}, {despacho[22]}, "

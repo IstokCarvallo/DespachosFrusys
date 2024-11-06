@@ -16,7 +16,7 @@ def archivo(mensaje):
 def conecta_SQL():
     try:
         conectar = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=192.168.20.37' +
-                                  ';DATABASE=Produccion_2023;UID=UserCProduce' +
+                                  ';DATABASE=Produccion_2024;UID=UserCProduce' +
                                   ';PWD=rio.2023*;TrustedConnection=1;TrustServerCertificate=yes')
         conectado = True
     except:
@@ -32,7 +32,7 @@ def conecta_MySQL():
             port=3306,
             user='Uprag',
             password='rio.2024',
-            db='pallet_24'
+            db='frusys25'
         )
     except Error as ex:
         print(f"Error durante la coneccion:{format(ex)}")

@@ -64,7 +64,7 @@ def cargar():
 
             elimina = (f"Delete From despacho "
                        f"Where Datediff(fechaDespacho, '{fecha}') = 0 "
-                       f"Or Datediff(fechaDespacho, '{fecha}') = 1")
+                       f"Or Datediff(fechaDespacho, '{fecha}') = -1")
             
             mensaje += insertar(f'Se eliminaran {frusys.rowcount} registros.')
 

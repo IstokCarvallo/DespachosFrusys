@@ -44,6 +44,7 @@ def conecta_MySQL():
 def cargar():
     mensaje = ''
     fecha = datetime.datetime.now().strftime("%Y%m%d")
+    # fecha = '20241111'
 
     mensaje += insertar('Inicio de Proceso de Carga...')
     mensaje += insertar('Recuperacion de Despachos a cargar...')
@@ -79,12 +80,12 @@ def cargar():
                 sql = ("Insert Into Despacho(operacion,embarque,planta,consignatario,fechaDespacho,guia,"
                 "contenedor,folio,especie,variedad,variedadReal,embalaje,etiqueta,productor,predio,"
                 "cuartel,productorReal,predioReal,cuartelReal,packing,fechaEmbalaje,categoria,"
-                "categoriaReal,calibre,calibreReal,condicion,basePallet,cajas)"
+                "categoriaReal,calibre,calibreReal,condicion,basePallet,cajas,codigo_operacional)"
                 f"Values ('{despacho[0]}', '{despacho[1]}', {despacho[2]}, {despacho[3]}, '{despacho[4]}', "
                 f"{despacho[5]}, '{despacho[6]}', '{despacho[7]}', {despacho[8]}, {despacho[9]}, {despacho[10]}, "
                 f"'{despacho[11]}', {despacho[12]}, {despacho[13]}, {despacho[14]}, {despacho[15]}, {despacho[16]}, "
                 f"{despacho[17]}, {despacho[18]}, {despacho[19]}, '{despacho[20]}', {despacho[21]}, {despacho[22]}, "
-                f"'{despacho[23]}', '{despacho[24]}', '{despacho[26]}', {despacho[25]}, {despacho[27]})")
+                f"'{despacho[23]}', '{despacho[24]}', '{despacho[26]}', {despacho[25]}, {despacho[27]}, '{despacho[28]}')")
                 
                 frusys.execute(sql)
                 mySQL.commit()

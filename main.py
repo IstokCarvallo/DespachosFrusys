@@ -44,7 +44,7 @@ def conecta_MySQL():
 def cargar():
     mensaje = ''
     fecha = datetime.datetime.now().strftime("%Y%m%d")
-    # fecha = '20241111'
+    # fecha = '20250223'
 
     mensaje += insertar('Inicio de Proceso de Carga...')
     mensaje += insertar('Recuperacion de Despachos a cargar...')
@@ -64,8 +64,8 @@ def cargar():
             frusys = mySQL.cursor()
 
             elimina = (f"Delete From despacho "
-                       f"Where Datediff(fechaDespacho, '{fecha}') = 0 "
-                       f"Or Datediff(fechaDespacho, '{fecha}') = -1")
+                       f"Where Datediff(fechaDespacho, '{fecha}') Between -2 and 0 ")
+                       # f"Or Datediff(fechaDespacho, '{fecha}') = -1")
             
             mensaje += insertar(f'Se eliminaran {frusys.rowcount} registros.')
 

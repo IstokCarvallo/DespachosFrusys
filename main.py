@@ -16,8 +16,11 @@ def archivo(mensaje):
 def conecta_SQL():
     try:
         conectar = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=192.168.20.37' +
-                                  ';DATABASE=Produccion_2024;UID=UserCProduce' +
-                                  ';PWD=rio.2023*;TrustedConnection=1;TrustServerCertificate=yes')
+                              ';DATABASE=Produccion_2024;Trusted_Connection=yes;TrustServerCertificate=yes')
+    
+        # conectar = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=192.168.20.37' +
+        #                           ';DATABASE=Produccion_2024;UID=UserCProduce' +
+        #                           ';PWD=rio.2023*;TrustedConnection=1;TrustServerCertificate=yes')
         conectado = True
     except:
         conectar = ''

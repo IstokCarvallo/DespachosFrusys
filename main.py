@@ -67,7 +67,7 @@ def cargar():
             frusys = mySQL.cursor()
 
             elimina = (f"Delete From despacho "
-                       f"Where Datediff(fechaDespacho, '{fecha}') Between -2 and 0 ")
+                       f"Where Datediff(fechaDespacho, '{fecha}') Between -10 and 0 ")
                        # f"Or Datediff(fechaDespacho, '{fecha}') = -1")
             
             mensaje += insertar(f'Se eliminaran {frusys.rowcount} registros.')

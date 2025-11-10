@@ -16,7 +16,7 @@ def archivo(mensaje):
 def conecta_SQL():
     try:
         conectar = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=192.168.20.37' +
-                              ';DATABASE=Produccion_2024;Trusted_Connection=yes;TrustServerCertificate=yes')
+                              ';DATABASE=Produccion_2025;Trusted_Connection=yes;TrustServerCertificate=yes')
     
         # conectar = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=192.168.20.37' +
         #                           ';DATABASE=Produccion_2024;UID=UserCProduce' +
@@ -80,9 +80,9 @@ def cargar():
 
             for despacho in despachos:
                 sql = ("Insert Into Despacho(operacion,embarque,planta,consignatario,fechaDespacho,guia,"
-                "contenedor,folio,especie,variedad,variedadReal,embalaje,etiqueta,productor,predio,"
-                "cuartel,productorReal,predioReal,cuartelReal,packing,fechaEmbalaje,categoria,"
-                "categoriaReal,calibre,calibreReal,condicion,basePallet,cajas,codigo_operacional,Tipo_Planilla_C, Tipo_Planilla)"
+                "contenedor,folio,especie,variedadReal,variedad,embalaje,etiqueta,productorReal,predioReal,"
+                "bcuartelReal,productor,predio,cuartel,packing,fechaEmbalaje,categoriaReal,categoria,"
+                "calibreReal,calibre,condicion,basePallet,cajas,codigo_operacional,Tipo_Planilla_C, Tipo_Planilla)"
                 f"Values ('{despacho[0]}', '{despacho[1]}', {despacho[2]}, {despacho[3]}, '{despacho[4]}', "
                 f"{despacho[5]}, '{despacho[6]}', '{despacho[7]}', {despacho[8]}, {despacho[9]}, {despacho[10]}, "
                 f"'{despacho[11]}', {despacho[12]}, {despacho[13]}, {despacho[14]}, {despacho[15]}, {despacho[16]}, "
